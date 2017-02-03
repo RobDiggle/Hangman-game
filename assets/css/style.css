@@ -1,0 +1,32 @@
+body{
+    background-color: Navajowhite;
+  }
+
+
+  .centerImage{
+   display: block;
+    margin: auto;
+    width: 20%;
+
+  }
+  
+  .centerheader{
+    text-align: center;
+  }
+
+  .centerbox{
+    border:solid 5px sienna;
+    padding: 10px;
+  }
+
+
+  #centhead{
+    font-style: 
+  }
+
+   .rightImage{
+   display: block;
+    margin:-70px 0px 0px 1000px;
+    width: 90%;
+
+  }
