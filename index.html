@@ -3,11 +3,125 @@
   <head>
     <meta charset="UTF-8">
     <title>Hangman game</title>
+    <style>
+body{
+    background-color: Navajowhite;
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  }
 
-    <script src="assets/javascript/game.js"/>
 
+  .centerImage{
+   display: block;
+    margin: auto;
+    width: 20%;
+
+  }
+  
+  .centerheader{
+    text-align: center;
+  }
+
+  .centerbox{
+    border:solid 5px sienna;
+    padding: 10px;
+  }
+
+
+  #centhead{
+    font-style: 
+  }
+
+   .rightImage{
+   display: block;
+    margin:-70px 0px 0px 1000px;
+    width: 90%;
+
+  }
+
+
+    </style>
+
+  <script>
+var randomWordArr = ["hamster","death","ill","design","designed","designation","system","systematic","Pashtunwali","Punjabi","Amazigh",
+      "Seize","Orlando","Universal","immoral","Eraser","Porter","Spirit","Beehive","Clockwork", "Yehoshua","Jesus","Iesous","Yahweh","Persia","Salvation","Arjuna","Krishna","Gopher","Antarctica","Abomination","Argentina","Why","Georgia"]
+      var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+
+
+      var s;
+      var count = 0;
+      var answerArray = []
+
+      function startUp()
+      {
+
+        for (var i = 0; i < randomWord.length; i++)
+         {
+
+          answerArray[i] = "_";
+          
+         }
+
+      }
+
+
+      s = answerArray.join(" ");
+      document.getElementById("answer").innerHTML = s;
+
+      function Letter()
+      {
+        var letter = document.getElementById("letter").value;
+
+        if (letter.length > 0)
+        {
+          for (var i=0; i < randomWord.length; i++)
+          {
+            if (randomWord[i] === letter)
+            {
+              answerArray[i] = letter
+            }
+
+          }
+
+          count++
+
+          document.getElementById("counter").innerHTML = "No of clicks: " + count;
+          document.getElementById("answer").innerHTML = answerArray.join(" ");
+
+
+        }
+
+
+   
+      if(count === 3){
+        alert("7 tries left.")
+      }
+
+
+
+      if(count === 5){
+        alert("5 tries left.")
+      }
+
+
+      if(count === 8){
+        alert("2 tries left.")
+      }
+
+        if(count>10)
+        {
+          alert("You're dead.");
+        }
+
+
+      }
+
+
+
+
+
+
+
+  </script>
     
 
   </head>
@@ -22,7 +136,7 @@
     </div>
 
   <div class="centerImage">
-    <img src="http://1.bp.blogspot.com/_s440RiiMhzI/S7QsDr_MIcI/AAAAAAAAEzg/he4-Nro4ns0/s1600/spirit+of+beehive.jpg" height="212" width="345"/>
+    <img src="assets/images/field1.jpg" height="212" width="345"/>
   </div>
 
   <div class="centerbox">
@@ -45,12 +159,34 @@
   </div>
 
 
+
+<p> Restart button at bottom </p>
+
+
+
   </div>
 
 
-
-
-
+<br>
+<h5> Restart game </h5>
+<br> <a href="file:///C:/Users/Robert%20Diggle/Desktop/RCB/Homework/Homework%233/index.html">
+    <img src="assets/images/an1.jpg"/>
+      </a>
+<br> <a href="file:///C:/Users/Robert%20Diggle/Desktop/RCB/Homework/Homework%233/index.html">
+    <img src="assets/images/an1.jpg"/>
+      </a>
+<br> <a href="file:///C:/Users/Robert%20Diggle/Desktop/RCB/Homework/Homework%233/index.html">
+    <img src="assets/images/an1.jpg"/>
+      </a>
+<br> <a href="file:///C:/Users/Robert%20Diggle/Desktop/RCB/Homework/Homework%233/index.html">
+    <img src="assets/images/an1.jpg"/>
+      </a>
+<br> <a href="file:///C:/Users/Robert%20Diggle/Desktop/RCB/Homework/Homework%233/index.html">
+    <img src="assets/images/an1.jpg"/>
+      </a>
+<br> <a href="file:///C:/Users/Robert%20Diggle/Desktop/RCB/Homework/Homework%233/index.html">
+    <img src="assets/images/an1.jpg"/>
+      </a>
 
 
 
