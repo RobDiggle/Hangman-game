@@ -1,4 +1,6 @@
- var randomWordArr = ["hamster","death","ill","design","designed","designation","system","systematic","Pashtunwali","Punjabi","Amazigh",
+ 
+  <script>
+var randomWordArr = ["hamster","death","ill","design","designed","designation","system","systematic","Pashtunwali","Punjabi","Amazigh",
       "Seize","Orlando","Universal","immoral","Eraser","Porter","Spirit","Beehive","Clockwork", "Yehoshua","Jesus","Iesous","Yahweh","Persia","Salvation","Arjuna","Krishna","Gopher","Antarctica","Abomination","Argentina","Why","Georgia"]
       var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
 
@@ -47,12 +49,26 @@
         }
 
 
-        if(count>5)
+   
+      if(count === 3){
+        alert("7 tries left.")
+      }
+
+
+
+      if(count === 5){
+        alert("5 tries left.")
+      }
+
+
+      if(count === 8){
+        alert("2 tries left.")
+      }
+
+        if(count>10)
         {
-          document.getElementById("stat").innerHTML = "Guess it already!";
+          alert("You're dead.");
         }
 
 
       }
-
-
